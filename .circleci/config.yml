@@ -31,7 +31,6 @@ jobs:
       - run:
           name: Reupload and install stickers
           command: |
-            cat telegram-packs.txt
             cat telegram-packs.txt | xargs sticker-import
 
       - add_ssh_keys
@@ -49,7 +48,7 @@ jobs:
             git config --global user.name "eug-vs"
             # checkout development and bump the version
             git add .
-            git commit -m "feat: add stickerpacks with CircleCI"
+            git commit -m "feat: add stickerpacks with CircleCI [ci skip]"
             git push -u origin master
 
 workflows:
