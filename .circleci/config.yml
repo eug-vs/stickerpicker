@@ -17,7 +17,7 @@ jobs:
 
       - run:
           name: Reupload and install stickers
-          command: cat telegram-packs.txt | xargs stickers-import
+          command: cat telegram-packs.txt | xargs sticker-import
 
       - run:
           name: Commit stickerpack JSON's
