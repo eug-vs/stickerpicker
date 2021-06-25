@@ -25,6 +25,10 @@ jobs:
           command: envsubst < config.template.json > config.json
 
       - run:
+          name: Decrypt telethon session
+          command: gpg --passphrase $PASSPHRASE --decrypt sticker-import.session.gpg > sticker.import.session
+
+      - run:
           name: Reupload and install stickers
           command: cat telegram-packs.txt | xargs sticker-import
 
