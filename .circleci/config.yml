@@ -30,7 +30,9 @@ jobs:
 
       - run:
           name: Reupload and install stickers
-          command: cat telegram-packs.txt | xargs sticker-import
+          command: |
+            cat telegram-packs.txt
+            cat telegram-packs.txt | xargs sticker-import
 
       - add_ssh_keys
 
