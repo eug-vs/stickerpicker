@@ -1,0 +1,32 @@
+version: 2
+
+defaults: &defaults
+  working_directory: ~/repo
+  docker:
+    - image: cimg/python:3.9.5
+
+jobs:
+  upload_stickers:
+    <<: *defaults
+    steps:
+      - checkout
+
+      - run:
+          name: Install python dependencies
+          command: pip3 install .
+
+      - run:
+          name: Reupload and install stickers
+          command: cat telegram-packs.txt | xargs stickers-import
+
+      - run:
+          name: Commit stickerpack JSON's
+          command: echo 'Not implemented'
+
+workflows:
+  version: 2
+
+  test:
+    jobs:
+      - upload_stickers
+
