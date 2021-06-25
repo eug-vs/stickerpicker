@@ -1,5 +1,10 @@
 # Maunium sticker picker
-A fast and simple Matrix sticker picker widget. Tested on Element Web, Android & iOS.
+A fast and simple Matrix sticker picker widget. Tested on Element Web, Android & iOS. Animated stickers are currently not supported.
+
+## TL;DR
+ - How to use stickerpacks? See step 2: https://github.com/maunium/stickerpicker/wiki/Enabling-the-widget
+ - How to add my own stickerpacks? - open PR to this file https://github.com/eug-vs/stickerpicker/blob/master/telegram-packs.txt
+
 
 ## Discussion
 Matrix room: [`#stickerpicker:maunium.net`](https://matrix.to/#/#stickerpicker:maunium.net)
