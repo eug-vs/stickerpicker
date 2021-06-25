@@ -1,6 +1,8 @@
 {
   "packs": [
-    "retarded_wojak.json"
+    "retarded_wojak.json",
+    "Ahhegao.json",
+    "strong_isnot_who.json"
   ],
   "homeserver_url": "https://matrix-client.matrix.org"
 }
