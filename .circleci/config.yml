@@ -19,9 +19,23 @@ jobs:
           name: Reupload and install stickers
           command: cat telegram-packs.txt | xargs sticker-import
 
+      - add_ssh_keys
+
+      - run:
+          name: Add github to known_hosts
+          command: |
+            mkdir -p ~/.ssh
+            ssh-keyscan github.com >> ~/.ssh/known_hosts
+
       - run:
           name: Commit stickerpack JSON's
-          command: echo 'Not implemented'
+          command: |
+            git config --global user.email "eug-vs@keemail.me"
+            git config --global user.name "eug-vs"
+            # checkout development and bump the version
+            git add .
+            git commit -m "feat: add stickerpacks with CircleCI"
+            git push -u origin master
 
 workflows:
   version: 2
