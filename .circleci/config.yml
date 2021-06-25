@@ -16,6 +16,10 @@ jobs:
           command: pip3 install .
 
       - run:
+          name: Create config.json
+          command: echo '{"homeserver": "'$HOMESERVER'", "user_id": "'$USER_ID'", "access_token": "'$ACCESS_TOKEN'"}' > config.json
+
+      - run:
           name: Reupload and install stickers
           command: cat telegram-packs.txt | xargs sticker-import
 
