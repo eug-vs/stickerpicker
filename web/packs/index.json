@@ -1,0 +1,6 @@
+{
+  "packs": [
+    "retarded_wojak.json"
+  ],
+  "homeserver_url": "https://matrix-client.matrix.org"
+}
